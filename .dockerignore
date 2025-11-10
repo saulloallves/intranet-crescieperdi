@@ -1,0 +1,16 @@
+# Ignorar arquivos/desnecessários para build
+node_modules
+npm-debug.log
+*.log
+.git
+.gitignore
+Dockerfile*
+docker-compose.yml
+.vscode
+cypress
+Cypress*
+.docs_tmp
+supabase/.branches
+supabase/.temp
+dist
+# Mantém src e configs necessários

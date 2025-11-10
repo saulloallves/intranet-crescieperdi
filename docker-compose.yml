@@ -1,0 +1,26 @@
+services:
+  intranet:
+    build:
+      context: .
+      args:
+        VITE_SUPABASE_URL: ${VITE_SUPABASE_URL}
+        VITE_SUPABASE_ANON_KEY: ${VITE_SUPABASE_ANON_KEY}
+    image: intranet-crescieperdi:latest
+    container_name: intranet-crescieperdi
+    restart: unless-stopped
+    ports:
+      - "8084:80"  # Porta interna consumida pelo Nginx reverso do host
+    environment:
+      TZ: America/Sao_Paulo
+    networks:
+      - intranet_net
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+networks:
+  intranet_net:
+    external: true
+    # Crie previamente com: docker network create intranet_net

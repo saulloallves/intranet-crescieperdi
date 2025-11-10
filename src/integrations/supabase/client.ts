@@ -2,8 +2,9 @@
 import { createClient } from '@supabase/supabase-js';
 import type { Database } from './types';
 
-const SUPABASE_URL = "https://sgeabunxaunzoedwvvox.supabase.co";
-const SUPABASE_PUBLISHABLE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNnZWFidW54YXVuem9lZHd2dm94Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTY5OTQ3ODEsImV4cCI6MjA3MjU3MDc4MX0.DCnflwz3CbKpepMcj-sANiApoR-jHnvwnQWsImVFS58";
+// Usa variáveis de ambiente Vite (definidas em build) com fallback aos valores originais para não quebrar ambientes existentes.
+const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL || "https://sgeabunxaunzoedwvvox.supabase.co";
+const SUPABASE_PUBLISHABLE_KEY = import.meta.env.VITE_SUPABASE_ANON_KEY || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNnZWFidW54YXVuem9lZHd2dm94Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTY5OTQ3ODEsImV4cCI6MjA3MjU3MDc4MX0.DCnflwz3CbKpepMcj-sANiApoR-jHnvwnQWsImVFS58";
 
 // Import the supabase client like this:
 // import { supabase } from "@/integrations/supabase/client";
