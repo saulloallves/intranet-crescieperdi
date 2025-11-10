@@ -1,0 +1,95 @@
+project_id = "sgeabunxaunzoedwvvox"
+
+[functions.search-weekly-report]
+verify_jwt = false
+
+[functions.search-weekly-report.schedule]
+cron = "0 9 * * 1"  # Segunda-feira às 9h
+
+[functions.mural-ai-filter]
+verify_jwt = false
+
+[functions.mural-ai-validate]
+verify_jwt = false
+
+[functions.mural-moderate-response]
+verify_jwt = false
+
+[functions.mural-feed-integration]
+verify_jwt = false
+
+[functions.mural-notify-moderators]
+verify_jwt = false
+
+[functions.mural-weekly-report]
+verify_jwt = false
+
+[functions.mural-weekly-report.schedule]
+cron = "0 9 * * 1"  # Segunda-feira às 9h
+
+[functions.user-permissions-management]
+verify_jwt = true
+
+[functions.user-activity-monitoring]
+verify_jwt = true
+
+[functions.user-role-switching]
+verify_jwt = true
+
+[functions.user-security-monitoring]
+verify_jwt = true
+
+[functions.user-security-analysis]
+verify_jwt = true
+
+[functions.user-permission-optimizer]
+verify_jwt = true
+
+[functions.user-activity-insights]
+verify_jwt = true
+
+[functions.send-notification-advanced]
+verify_jwt = true
+
+[functions.process-notification-template]
+verify_jwt = true
+
+[functions.notification-stats]
+verify_jwt = true
+
+[functions.notification-reports]
+verify_jwt = false
+
+[functions.notification-reports.schedule]
+cron = "0 9 * * 1"  # Segunda-feira às 9h
+
+[functions.analyze-notification-engagement]
+verify_jwt = true
+
+[functions.optimize-send-times]
+verify_jwt = true
+
+[functions.generate-smart-reports]
+verify_jwt = false
+
+[functions.generate-smart-reports.schedule]
+cron = "0 9 * * 1"  # Segunda-feira às 9h
+
+[functions.girabot-universal]
+verify_jwt = true
+
+[functions.girabot-reports]
+verify_jwt = false
+
+[functions.girabot-reports.schedule]
+cron = "0 8 * * *"  # Diário às 8h da manhã
+
+[functions.girabot-contextual-help]
+verify_jwt = true
+
+[functions.girabot-smart-alerts]
+verify_jwt = false
+
+[functions.girabot-smart-alerts.schedule]
+cron = "0 */6 * * *"  # A cada 6 horas
+
